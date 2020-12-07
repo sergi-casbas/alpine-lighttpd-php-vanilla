@@ -9,7 +9,9 @@ docker run -it --name myserver alpine-lighttpd-php-vanilla:latest
 
 ## Environment variables.
 LIGHTTPD_UID = Set UID to run web daemons.
+
 LIGHTTPD_GID = Set GID to run web daemons.
+
 APK_PACKAGES = Add additional packages at start.
 
 ## Discretional scripts.
