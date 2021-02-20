@@ -1,7 +1,7 @@
-FROM alpine:latest
+FROM alpine:3.12
 
 # Install minimal packages.
-RUN apk -U --upgrade add lighttpd php-fpm
+RUN apk -U --upgrade --no-cache add lighttpd php-fpm
 
 # Clean packages cache
 RUN rm -rf /var/cache/apk/*
