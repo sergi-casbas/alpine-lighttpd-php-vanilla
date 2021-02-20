@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./build-generic "3.12-amd64"

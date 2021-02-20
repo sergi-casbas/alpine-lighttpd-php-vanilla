@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#-e LIGHTTPD_UID=145 \
+#-e LIGHTTPD_GID=415 \
+
+alpv_version="$1"
+
+docker run --rm \
+--name alpv_test \
+-e APK_PACKAGES="nano" \
+-v $PWD/docker-entrypoint.d:/docker-entrypoint.d \
+-v $PWD/test-site:/var/www/localhost \
+$2 $3 $4 \
+alpine-lighttpd-php-vanilla:$alpv_version

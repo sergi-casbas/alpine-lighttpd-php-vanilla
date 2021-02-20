@@ -1,0 +1,7 @@
+#!/bin/bash
+
+alpv_version="$1"
+docker rmi alpine-lighttpd-php-vanilla:$alpv_version
+docker build -t alpine-lighttpd-php-vanilla:$alpv_version ../
+
+
